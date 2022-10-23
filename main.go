@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
@@ -9,8 +8,6 @@ import (
 )
 
 func main() {
-	fmt.Print("test")
-
 	http.HandleFunc("/", handler.HelloHandler)
 	http.HandleFunc("/public", handler.PublicHandler)
 
