@@ -3,15 +3,13 @@ package main
 import (
 	"fmt"
 	"net/http"
-)
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello World")
-}
+	"github.com/masaya0521/go-jwt/handler"
+)
 
 func main() {
 	fmt.Print("test")
 
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/", handler.HelloHandler)
 	http.ListenAndServe(":8080", nil)
 }
